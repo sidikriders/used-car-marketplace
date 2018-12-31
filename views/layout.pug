@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title= title || 'Beli Mobil'
+    link(rel="shortcut icon", href="/favicon.ico")
+    //- link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css", integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS", crossorigin="anonymous")
+    link(href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i", rel="stylesheet")
+    link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.6.3/css/all.css", integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/", crossorigin="anonymous")
+    link(rel="stylesheet", href="/css/global.css")
+    block additional-css
+  body
+    #header
+      img(src="http://via.placeholder.com/105x30/19a3ec/333?text=Logo Beli Mobil", alt="logo")
+      .h-select
+        .btn
+          .fa.fa-angle-down
+          span Kondisi Mobil
+        .options
+          p(val="0") Semua Kondisi
+          p(val="1") Mobil Baru
+          p(val="2") Mobil Bekas
+      .header-input
+        .fa.fa-search
+        input#header-search(type="text", name="search-car", placeholder='Cari mobil bekas/baru berdasarkan nama, jenis, atau tahun')
+        .btn.info-btn
+          span Cari
+      .btn#log-in
+        p Masuk
+      .btn#sign-up
+        p Daftar
+    block body
+    script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", crossorigin="anonymous")
+    script(src="/js/header.js")
+    block additional-script
+    //- script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js", integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut", crossorigin="anonymous")
+    //- script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js", integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k", crossorigin="anonymous")
