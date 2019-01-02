@@ -22,10 +22,26 @@ html
         input#header-search(type="text", name="search-car", placeholder='Cari mobil bekas/baru berdasarkan nama, jenis, atau tahun')
         .btn.info-btn
           span Cari Mobil
-      a(href="/faq")
-        p FAQ
+      a(href="/pusat-bantuan")
+        p Bantuan
       a(href="hubungi-kami")
         p Hubungi Kami
+      .header-side-icon
+        i.fa.fa-search
+        i.fa.fa-bars
+    #side-menu
+      a.side-menu-list(href='/cari-mobil')
+        i.fa.fa-angle-right
+        span Cari Mobil
+      a.side-menu-list(href='/daftarkan-mobil')
+        i.fa.fa-angle-right
+        span Daftarkan Mobil
+      a.side-menu-list(href='/pusat-bantuan')
+        i.fa.fa-angle-right
+        span Bantuan
+      a.side-menu-list(href='/hubungi-kami')
+          i.fa.fa-angle-right
+          span Hubungi Kami
     block body
     script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", crossorigin="anonymous")
     script(src="/js/header.js")
