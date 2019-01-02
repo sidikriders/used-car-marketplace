@@ -118,6 +118,10 @@ p {
   margin-top: 6px;
 }
 
+#header > a > i {
+  margin-right: 5px;
+}
+
 #header .header-side-icon {
   display: none;
   font-size: 20px;
@@ -160,7 +164,7 @@ p {
   margin-right: 10px;
 }
 
-@media only screen and (max-width: 734px) {
+@media only screen and (max-width: 815px) {
   #header {
     justify-content: space-between;
     padding-right: 0;
