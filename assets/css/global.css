@@ -13,6 +13,10 @@ body {
   -webkit-user-select: none;
 }
 
+body.side-menu-open {
+  overflow: hidden !important;
+}
+
 a, a:focus {
   text-decoration: none;
   color: #333;
