@@ -11,24 +11,29 @@ block body
       .input
         i.fas.fa-search
         input(type= 'text', placeholder='Kata kunci untuk pencarian mobil')
-      .input.select
+      #lokasi.input.select
         .btn
           i.fas.fa-caret-down
           span Lokasi
         .options
-          .opt
+          .opt(val=0)
             p Semua Lokasi
-          .opt
+          .opt(val=1)
             p Kota Yogyakarta
-          .opt
+          .opt(val=2)
             p Kab. Bantul
-          .opt
+          .opt(val=3)
             p Kab. Gunungkidul
-          .opt
+          .opt(val=4)
             p Kab. Kulon Progo
-          .opt
+          .opt(val=5)
             p Kab. Sleman
+          .opt(val=6)
+            p Luar Jogja
       .last-line
         p pencarian lebih lanjut
         .btn
           p Cari Mobil
+
+block additional-script
+  script(src="/js/home.js")

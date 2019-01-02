@@ -83,6 +83,11 @@
   display: none;
 }
 
+#search-engine > .input.select > .options.show {
+  display: block;
+  z-index: 2;
+}
+
 #search-engine > .input.select .options .opt {
   padding: 15px;
   border-bottom: solid 1px #cccc;
@@ -91,6 +96,20 @@
 #search-engine > .input.select .options .opt:hover {
   cursor: pointer;
   background: #f5f4f3;
+}
+
+#search-engine > .input.select .btn span,
+#search-engine > .input.select .options .opt p {
+  color: #333;
+}
+
+.fs-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
 }
 
 #search-engine .last-line {
