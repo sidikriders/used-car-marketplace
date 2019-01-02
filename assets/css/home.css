@@ -1,0 +1,124 @@
+.main-title {
+  position: relative;
+  width: calc(100% - 30px);
+  height: 265px;
+  padding: 15px 15px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  background: #54c8f2;
+  background: -moz-linear-gradient(top, #54c8f2 0%, #54c8f2 45%, #008af4 93%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #54c8f2 0%,#54c8f2 45%,#008af4 93%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #54c8f2 0%,#54c8f2 45%,#008af4 93%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54c8f2', endColorstr='#008af4',GradientType=0 ); /* IE6-9 */
+}
+
+#search-engine {
+  width: 960px;
+  max-width: calc(100% - 30px);
+  min-height: 30px;
+  margin: auto;
+  position: absolute;
+  top: calc(100% - 75px);
+  background: #2525bf;
+  padding: 15px 0 15px 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#search-engine > * {
+  flex-grow: 1;
+}
+
+#search-engine > .input {
+  color: #aeaeae;
+  background: #fff;
+  margin: 0 15px 15px 0;
+  padding: 10px 15px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+#search-engine > .input > i,
+#search-engine > .input > .btn > i {
+  margin-right: 10px;
+}
+
+#search-engine > .input > input {
+  flex-grow: 1;
+  border: none;
+  font-size: 16px;
+}
+
+#search-engine > .input > input:focus {
+  outline: none;
+}
+
+#search-engine > .input.select {
+  position: relative;
+  padding: 0;
+}
+
+#search-engine > .input.select .btn {
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  padding: 15px;
+}
+
+#search-engine > .input.select .btn:hover {
+  cursor: pointer;
+  background: #f5f4f3;
+}
+
+#search-engine > .input.select > .options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: calc(100% - 2px);
+  background: white;
+  border: solid 1px #cccc;
+  display: none;
+}
+
+#search-engine > .input.select .options .opt {
+  padding: 15px;
+  border-bottom: solid 1px #cccc;
+}
+
+#search-engine > .input.select .options .opt:hover {
+  cursor: pointer;
+  background: #f5f4f3;
+}
+
+#search-engine .last-line {
+  width: calc(100% - 15px);
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+}
+
+#search-engine .last-line > p {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#search-engine .last-line > p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#search-engine .last-line > .btn {
+  background: #0394ff;
+  height: 30px;
+  font-size: 16px;
+  padding: 10px 15px 0px
+}
+
+#search-engine .last-line > .btn:hover {
+  background: #85cbff;
+  cursor: pointer;
+}

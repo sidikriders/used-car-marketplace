@@ -1,3 +1,34 @@
 extends layout
 
+block additional-css
+  link(rel="stylesheet", href="/css/home.css")
+
 block body
+  .main-title
+    h1 Jual Beli Mobil Bekas Di Jogja Dengan Mudah Dan Cepat
+    h3 Cari mobil bekas dengan mudah dan murah di jogja dan sekitarnya
+    #search-engine
+      .input
+        i.fas.fa-search
+        input(type= 'text', placeholder='Kata kunci untuk pencarian mobil')
+      .input.select
+        .btn
+          i.fas.fa-caret-down
+          span Lokasi
+        .options
+          .opt
+            p Semua Lokasi
+          .opt
+            p Kota Yogyakarta
+          .opt
+            p Kab. Bantul
+          .opt
+            p Kab. Gunungkidul
+          .opt
+            p Kab. Kulon Progo
+          .opt
+            p Kab. Sleman
+      .last-line
+        p pencarian lebih lanjut
+        .btn
+          p Cari Mobil

@@ -114,7 +114,8 @@ p {
   border-bottom: solid 6px white;
 }
 
-#header > a:not(.header-logo):hover p {
+#header > a:not(.header-logo):hover p,
+#header > a:not(.header-logo):hover i {
   margin-top: 6px;
 }
 
@@ -142,12 +143,13 @@ p {
   border-right: solid 1px #ccc;
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease-out;
+  z-index: 99;
+  transition: all 0.15s ease-out;
 }
 
 #side-menu.open {
   right: 0vw;
-  transition: all 0.3s ease-out;
+  transition: all 0.15s ease-out;
 }
 
 
@@ -179,7 +181,7 @@ p {
     display: flex;
   }
 
-  #header .header-side-icon .fa.fa-search {
+  #header .header-side-icon .fas.fa-search {
     display: none;
   }
 
@@ -190,11 +192,11 @@ p {
     display: none;
   }
 
-  #header .header-side-icon .fa.fa-bars {
+  #header .header-side-icon .fas.fa-bars {
     display: none;
   }
 
-  #header .header-side-icon .fa.fa-search {
+  #header .header-side-icon .fas.fa-search {
     display: inline-block;
   }
 }
