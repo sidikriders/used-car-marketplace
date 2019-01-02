@@ -13,41 +13,13 @@ body {
   -webkit-user-select: none;
 }
 
+a, a:focus {
+  text-decoration: none;
+  color: #333;
+}
+
 p {
   margin: 0;
-}
-
-.h-select {
-  cursor: pointer;
-  position: relative;
-  height: 20px;
-  width: 105px;
-}
-
-.h-select .btn .fa {
-  margin-right: 3px;
-}
-
-.h-select .options {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  border: solid 1px #ccc;
-}
-
-.h-select .options p {
-  padding: 10px;
-  width: 93px;
-}
-
-.h-select .options p:not(:last-child) {
-  border-bottom: solid 1px #ccc;
-}
-
-.h-select .options p:hover {
-  background-color: #efefef;
 }
 
 #header {
@@ -121,4 +93,23 @@ p {
   margin-right: 15px;
   border: solid 1px white;
   color: white;
+}
+
+#header > a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#header > a:not(.header-logo) {
+  padding: 0 15px;
+}
+
+#header > a:not(.header-logo):hover {
+  /* padding-top: 4px; */
+  border-bottom: solid 6px white;
+}
+
+#header > a:not(.header-logo):hover p {
+  margin-top: 6px;
 }

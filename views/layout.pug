@@ -13,24 +13,19 @@ html
     block additional-css
   body
     #header
-      img(src="http://via.placeholder.com/105x30/19a3ec/333?text=Logo Beli Mobil", alt="logo")
-      .h-select
-        .btn
-          .fa.fa-angle-down
-          span Kondisi Mobil
-        .options
-          p(val="0") Semua Kondisi
-          p(val="1") Mobil Baru
-          p(val="2") Mobil Bekas
+      a.header-logo(href="/")
+        img(src="http://via.placeholder.com/105x30/19a3ec/333?text=Logo Beli Mobil", alt="logo")
+      a(href="/daftarkan-mobil")
+        p Pasang Iklan
       .header-input
         .fa.fa-search
         input#header-search(type="text", name="search-car", placeholder='Cari mobil bekas/baru berdasarkan nama, jenis, atau tahun')
         .btn.info-btn
-          span Cari
-      .btn#log-in
-        p Masuk
-      .btn#sign-up
-        p Daftar
+          span Cari Mobil
+      a(href="/faq")
+        p FAQ
+      a(href="hubungi-kami")
+        p Hubungi Kami
     block body
     script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", crossorigin="anonymous")
     script(src="/js/header.js")
