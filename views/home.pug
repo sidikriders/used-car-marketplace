@@ -44,6 +44,21 @@ block body
             p Daihatsu
           .opt(val='4')
             p Suzuki
+      #type.input.select
+        .btn
+          i.fas.fa-car
+          span Tipe Mobil
+        .options
+          .opt(val=0)
+            p Semua Tipe
+          .opt(val=1)
+            p Sedan
+          .opt(val=2)
+            p SUV
+          .opt(val=3)
+            p Pick Up
+          .opt(val=4)
+            p Mini Bus
       #year.input
         i.fas.fa-calendar
         input(type="number", placeholder='Tahun')
@@ -88,6 +103,41 @@ block body
         p pencarian lebih lanjut
         #do-search.btn
           p Cari Mobil
+  .car-recommendation
+    h2 Rekomendasi Mobil Kami
+    p Deretan mobil pilihan yang dapat mempersingkat waktu pencarian anda
+    .car-recommendation-list
+      .arrow.left
+        i.fas.fa-chevron-circle-left
+      .main-list
+        - var arrayOh = [1,2,3,4]
+        each number in arrayOh
+          .card
+            img(src="/dummy/mobil-calya.jpg", alt="foto-mobil")
+            p.name 2018 Toyota Calya Murah Berkualitas KM Kecil
+            p.price 150Jt-an
+            a(href='/detail/some-name-and-id-0')
+          .card
+            img(src="/dummy/mobil-sienta.jpg", alt="foto-mobil")
+            p.name 2018 Toyota Sienta Murah Berkualitas KM Kecil
+            p.price 200Jt-an
+            a(href='/detail/some-name-and-id-0')
+      .arrow.right
+        i.fas.fa-chevron-circle-right
+  .why-us
+    h2 Kenapa Membeli Mobil Di MoKas.com?
+    ul
+      li Alasan 1
+      li Alasan 2
+      li Alasan 3
+      li Alasan 4
+  .brand-list
+    h2 Cari Mobil Berdasarkan Merek Mobil
+    p Cari pilihan mobil dari beragam merek yang tersedia
+  .car-type-list
+    h2 Cari Mobil Berdasarkan Tipe Mobil
+    p Cari pilihan mobil berdasarkan tipe mobil yang anda cari
 
+  include footer
 block additional-script
   script(src="/js/home.js")
