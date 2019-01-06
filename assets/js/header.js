@@ -22,10 +22,14 @@ $('#header .header-side-icon').click(function (e) {
   if (sideMenu.hasClass('open')) {
     sideMenu.removeClass('open')
     body.removeClass('side-menu-open')
-    headerInput.show()
+    if (window.innerWidth > 496) {
+      headerInput.show()
+    }
   } else {
     sideMenu.addClass('open')
     body.addClass('side-menu-open')
-    headerInput.hide()
+    if (window.innerWidth > 496) {
+      headerInput.hide()
+    }
   }
 })
