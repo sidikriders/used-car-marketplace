@@ -8,10 +8,10 @@ block body
     h1 Jual Beli Mobil Bekas Di Jogja Dengan Mudah Dan Cepat
     h3 Cari mobil bekas dengan mudah dan murah di jogja dan sekitarnya
     #search-engine
-      .input
+      form#keyword.input
         i.fas.fa-search
         input(type= 'text', placeholder='Kata kunci untuk pencarian mobil')
-      #lokasi.input.select
+      #location.input.select
         .btn
           i.fas.fa-caret-down
           span Lokasi
@@ -30,9 +30,63 @@ block body
             p Kab. Sleman
           .opt(val=6)
             p Luar Jogja
+      #brand.input.autocomplete
+        i.fas.fa-tag
+        input(type="text", placeholder='Merek')
+        .options
+          .opt(val='0')
+            p Semua Merek
+          .opt(val='1')
+            p Toyota
+          .opt(val='2')
+            p Honda
+          .opt(val='3')
+            p Daihatsu
+          .opt(val='4')
+            p Suzuki
+      #year.input
+        i.fas.fa-calendar
+        input(type="number", placeholder='Tahun')
+      #distance.input.select
+        .btn
+          i.fas.fa-caret-down
+          span Jarak Tempuh
+        .options
+          .opt(val=0)
+            p Semua Jarak
+          .opt(val=1)
+            p < 50.000 km
+          .opt(val=2)
+            p 50.000 - 100.000 km
+          .opt(val=3)
+            p 100.000 - 150.000 km
+          .opt(val=4)
+            p 150.000 - 200.000 km
+          .opt(val=5)
+            p 200.000 - 250.000 km
+          .opt(val=6)
+            p > 250.000 km
+      #transmition.input.select
+        .btn
+          i.fas.fa-caret-down
+          span Transmisi
+        .options
+          .opt(val=0)
+            p Semua Transmisi
+          .opt(val=1)
+            p AT
+          .opt(val=2)
+            p MT
+      #price.input.range
+        .btn
+          i.fas.fa-money-bill
+          span Harga
+        .ranger
+          input(type='number', placeholder='Dari')
+          input(type='number', placeholder='Sampai')
       .last-line
         p pencarian lebih lanjut
-        .btn
+        #do-search.btn
           p Cari Mobil
 
 block additional-script

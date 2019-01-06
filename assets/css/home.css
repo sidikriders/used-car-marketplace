@@ -40,6 +40,8 @@
   font-size: 16px;
   display: flex;
   align-items: center;
+  min-width: 280px;
+  min-height: 29px;
 }
 
 #search-engine > .input > i,
@@ -60,6 +62,7 @@
 #search-engine > .input.select {
   position: relative;
   padding: 0;
+  min-width: 173px;
 }
 
 #search-engine > .input.select .btn {
@@ -73,7 +76,8 @@
   background: #f5f4f3;
 }
 
-#search-engine > .input.select > .options {
+#search-engine > .input.select > .options,
+#search-engine > .input.autocomplete > .options {
   position: absolute;
   top: 100%;
   left: 0;
@@ -83,23 +87,26 @@
   display: none;
 }
 
-#search-engine > .input.select > .options.show {
+#search-engine > .input.select > .options.show,
+#search-engine > .input.autocomplete > .options.show {
   display: block;
   z-index: 2;
 }
 
-#search-engine > .input.select .options .opt {
+#search-engine > .input .options .opt {
   padding: 15px;
   border-bottom: solid 1px #cccc;
 }
 
-#search-engine > .input.select .options .opt:hover {
+#search-engine > .input .options .opt:hover {
   cursor: pointer;
   background: #f5f4f3;
 }
 
 #search-engine > .input.select .btn span,
-#search-engine > .input.select .options .opt p {
+#search-engine > .input.select .options .opt p,
+#search-engine > .input.autocomplete .btn span,
+#search-engine > .input.automcomplete .options .opt p {
   color: #333;
 }
 
@@ -112,11 +119,42 @@
   z-index: 1;
 }
 
+#search-engine .input.range {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 0;
+}
+
+#search-engine .input.range .btn {
+  margin-right: 15px;
+}
+
+#search-engine .input.range .ranger {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+#search-engine .input.range .ranger input {
+  outline: none;
+  border: none;
+  margin-right: 15px;
+  flex-grow: 1;
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 5px;
+  min-width: 250px;
+}
+
+#search-engine .input.autocomplete {
+  position: relative;
+}
+
 #search-engine .last-line {
   width: calc(100% - 15px);
   display: flex;
   justify-content: flex-end;
   margin-right: 15px;
+  flex-wrap: wrap;
 }
 
 #search-engine .last-line > p {
