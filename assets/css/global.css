@@ -172,6 +172,10 @@ p {
   margin-right: 10px;
 }
 
+.footer {
+  padding: 15px;
+  text-align: center;
+}
 @media only screen and (max-width: 815px) {
   #header {
     justify-content: space-between;
