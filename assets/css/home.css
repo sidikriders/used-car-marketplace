@@ -2,7 +2,7 @@
   position: relative;
   width: calc(100% - 30px);
   min-height: 265px;
-  padding: 15px 15px 70px;
+  padding: 15px 15px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,13 +20,17 @@
   text-align: center;
 }
 
+.main-title h1 {
+  margin-top: 60px;
+}
+
 #search-engine {
   width: 960px;
   max-width: calc(100% - 30px);
   min-height: 30px;
   margin: auto;
   position: relative;
-  top: 135px;
+  top: 60px;
   background: #2525bf;
   padding: 15px 0 15px 15px;
   display: flex;
@@ -257,14 +261,100 @@
   font-weight: 600;
 }
 
+.main-list .card a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 @media only screen and (max-width: 589px) {
   #search-engine .input.range .ranger input {
     margin-top: 10px;
   }
 }
 
-@media only screen and (max-width: 336px) {
-  .car-recommendation .car-recommendation-list .main-list {
-    /* margin: 0; */
-  }
+.why-us {
+  background-color: #46acf7;
+  padding: 30px 0 30px;
+  margin-top: 15px;
+}
+
+.why-us h2,
+.brand-list h2,
+.brand-list p {
+  max-width: 1240px;
+  padding: 0 15px;
+  text-align: center;
+  margin: auto;
+}
+
+.why-us ul {
+  max-width: 960px;
+  padding: 0 15px;
+  margin: 15px auto;
+  list-style: none;
+}
+
+.why-us ul li {
+  font-size: 16px;
+  margin: 0 0 15px;
+}
+
+.why-us ul li i {
+  margin-right: 10px;
+}
+
+.brand-list {
+  padding-top: 30px;
+}
+
+.brand-list p {
+  margin: 15px auto;
+}
+
+.brand-list .brand-list-container {
+  max-width: 1090px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px;
+  justify-content: center;
+}
+
+.brand-list .brand-list-container .brand {
+  border: solid 1px #ccc;
+  width: 235px;
+  height: 110px;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 0 15px 15px 0;
+  position: relative;
+}
+
+.brand-list-container .brand img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-list-container .brand a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.brand-list-container .brand .dot-dot-dot {
+  color: #aeaeae;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.brand .dot-dot-dot i {
+  margin-right: 5px;
 }

@@ -116,24 +116,50 @@ block body
             img(src="/dummy/mobil-calya.jpg", alt="foto-mobil")
             p.name 2018 Toyota Calya Murah Berkualitas KM Kecil
             p.price 150Jt-an
-            a(href='/detail/some-name-and-id-0')
+            a(href='/detail/some-name-and-id-0', title='2018 Toyota Calya Murah Berkualitas KM Kecil')
           .card
             img(src="/dummy/mobil-sienta.jpg", alt="foto-mobil")
             p.name 2018 Toyota Sienta Murah Berkualitas KM Kecil
             p.price 200Jt-an
-            a(href='/detail/some-name-and-id-0')
+            a(href='/detail/some-name-and-id-0', title='2018 Toyota Sienta Murah Berkualitas KM Kecil')
       .arrow.right
         i.fas.fa-chevron-circle-right
   .why-us
-    h2 Kenapa Membeli Mobil Di MoKas.com?
+    h2 Kenapa Membeli Mobil di MoKas.com?
     ul
-      li Alasan 1
-      li Alasan 2
-      li Alasan 3
-      li Alasan 4
+      li
+        i.fas.fa-play-circle
+        | Alasan 1
+      li
+        i.fas.fa-play-circle
+        | Alasan 2
+      li
+        i.fas.fa-play-circle
+        | Alasan 3
+      li
+        i.fas.fa-play-circle
+        | Alasan 4
   .brand-list
     h2 Cari Mobil Berdasarkan Merek Mobil
     p Cari pilihan mobil dari beragam merek yang tersedia
+    .brand-list-container
+      - var arr = [1,2,3]
+      each brand in arr
+        .brand
+          img(src="/dummy/logo-toyota.png", alt="Logo Toyota")
+          a(href="/brand/toyota-0", title='Toyota')
+        .brand
+          img(src="/dummy/logo-daihatsu.png", alt="Logo Daihatsu")
+          a(href="/brand/daihatsu-1", title='Daihatsu')
+      .brand
+        img(src="/dummy/logo-toyota.png", alt="Logo Toyota")
+        a(href="/brand/toyota-0", title='Toyota')
+      .brand
+        .dot-dot-dot
+          i.fas.fa-circle
+          i.fas.fa-circle
+          i.fas.fa-circle
+        a(href="/brand", title='Daihatsu')
   .car-type-list
     h2 Cari Mobil Berdasarkan Tipe Mobil
     p Cari pilihan mobil berdasarkan tipe mobil yang anda cari
