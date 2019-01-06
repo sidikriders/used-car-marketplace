@@ -82,3 +82,9 @@ $('#search-engine .input.autocomplete input').on('focus', function(e) {
     }
   })
 })
+
+// initiate advanced search
+$('#search-engine .last-line > p').click(function (e) {
+  var searchEngine = $('#search-engine')
+  searchEngine.toggleClass('show-other-filters')
+})

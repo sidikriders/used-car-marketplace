@@ -179,3 +179,17 @@
   background: #85cbff;
   cursor: pointer;
 }
+
+#search-engine .input:not(#keyword):not(#location) {
+  display: none;
+}
+
+#search-engine.show-other-filters .input:not(#keyword):not(#location) {
+  display: flex;
+}
+
+@media only screen and (max-width: 589px) {
+  #search-engine .input.range .ranger input {
+    margin-top: 10px;
+  }
+}
