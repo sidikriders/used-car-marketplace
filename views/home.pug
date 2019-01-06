@@ -159,11 +159,23 @@ block body
           i.fas.fa-circle
           i.fas.fa-circle
           i.fas.fa-circle
-        a(href="/brand", title='Daihatsu')
+        a(href="/brand", title='Daftar Semua Merek')
   .car-type-list
     h2 Cari Mobil Berdasarkan Tipe Mobil
     p Cari pilihan mobil berdasarkan tipe mobil yang anda cari
-
+    .type-list
+      - var types = ['Sedan', 'Jeep', 'SUV', 'Minibus', 'Hot Hatchback']
+      each _type, index in types
+        .type
+          i.fas.fa-car
+          p= _type
+          a(href="/type/" + _type + '-' + index, title= _type)
+      .type
+        .dot-dot-dot
+          i.fas.fa-circle
+          i.fas.fa-circle
+          i.fas.fa-circle
+        a(href="/type", title='Semua Tipe Mobil')
   include footer
 block additional-script
   script(src="/js/home.js")

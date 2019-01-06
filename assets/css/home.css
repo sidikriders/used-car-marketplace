@@ -275,7 +275,8 @@
   }
 }
 
-.why-us {
+.why-us,
+.car-type-list {
   background-color: #46acf7;
   padding: 30px 0 30px;
   margin-top: 15px;
@@ -283,7 +284,9 @@
 
 .why-us h2,
 .brand-list h2,
-.brand-list p {
+.brand-list p,
+.car-type-list h2,
+.car-type-list p {
   max-width: 1240px;
   padding: 0 15px;
   text-align: center;
@@ -310,11 +313,13 @@
   padding-top: 30px;
 }
 
-.brand-list p {
+.brand-list p,
+.car-type-list p {
   margin: 15px auto;
 }
 
-.brand-list .brand-list-container {
+.brand-list .brand-list-container,
+.car-type-list .type-list {
   max-width: 1090px;
   margin: 30px auto 0;
   display: flex;
@@ -347,7 +352,7 @@
   left: 0;
 }
 
-.brand-list-container .brand .dot-dot-dot {
+.dot-dot-dot {
   color: #aeaeae;
   display: flex;
   align-items: center;
@@ -356,5 +361,34 @@
 }
 
 .brand .dot-dot-dot i {
+  margin-right: 5px;
+}
+
+.car-type-list .type-list .type {
+  padding: 10px;
+  text-align: center;
+  width: 180px;
+  border: solid 1px #fff;
+  margin: 0 30px 15px 0;
+  height: 100px;
+  color: white;
+  border-radius: 5px;
+  position: relative;
+}
+
+.car-type-list .type-list .type > i {
+  font-size: 60px;
+}
+
+.car-type-list .type-list .type > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.car-type-list .type-list .type > .dot-dot-dot i {
+  color: white;
   margin-right: 5px;
 }
