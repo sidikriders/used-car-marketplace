@@ -88,3 +88,18 @@ $('#search-engine .last-line > p').click(function (e) {
   var searchEngine = $('#search-engine')
   searchEngine.toggleClass('show-other-filters')
 })
+
+// initiate carousel mobil rekomendai
+$('.car-recommendation .car-recommendation-list .arrow').click(function (e) {
+  var arrow = $(e.currentTarget)
+  var carList = $('.car-recommendation .car-recommendation-list .main-list')
+  if (arrow.hasClass('right')) {
+    carList.animate({
+      scrollLeft: (carList.scrollLeft() + 207) + 'px'
+    }, 120)
+  } else {
+    carList.animate({
+      scrollLeft: (carList.scrollLeft() - 207) + 'px'
+    }, 120)
+  }
+})
