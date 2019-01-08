@@ -7,8 +7,8 @@ module.exports = (sequelize, DataTypes) => {
   })
 
   CarPhotos.associate = function(models) {
-    CarPhotos.belongsTo(models.Cars)
-    CarPhotos.belongsTo(models.CarPhotoTitles)
+   // CarPhotos.belongsTo(models.Cars)
+    CarPhotos.belongsTo(models.CarPhotoTitle)
   }
   return CarPhotos
 }
