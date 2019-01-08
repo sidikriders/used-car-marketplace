@@ -143,17 +143,10 @@ block body
     h2 Cari Mobil Berdasarkan Merek Mobil
     p Cari pilihan mobil dari beragam merek yang tersedia
     .brand-list-container
-      - var arr = [1,2,3]
-      each brand in arr
+      each brand in brandList
         .brand
-          img(src="/dummy/logo-toyota.png", alt="Logo Toyota")
-          a(href="/brand/toyota-0", title='Toyota')
-        .brand
-          img(src="/dummy/logo-daihatsu.png", alt="Logo Daihatsu")
-          a(href="/brand/daihatsu-1", title='Daihatsu')
-      .brand
-        img(src="/dummy/logo-toyota.png", alt="Logo Toyota")
-        a(href="/brand/toyota-0", title='Toyota')
+          img(src=brand.logo, alt="Logo " + brand.name)
+          a(href="/brand/" + brand.name.toLowerCase() + "-" + brand.id, title=brand.name)
       .brand
         .dot-dot-dot
           i.fas.fa-circle
