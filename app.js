@@ -11,6 +11,22 @@ app.get('/', (req, res, next) => {
   res.render('home')
 })
 
+app.use('*', (req, res, next) => {
+  next({
+    code: 404,
+    msg: 'Page Not Found'
+  })
+})
+
+app.use((err, req, res, next) => {
+  console.error(err)
+  res.locals.err = {
+    code: err.code || 500,
+    msg: err.msg || 'Internal Server Error'
+  }
+  res.render('error')
+})
+
 app.listen(3000, () => {
   console.log('listening to port 3000')
 })

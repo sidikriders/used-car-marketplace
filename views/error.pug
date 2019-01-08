@@ -1,0 +1,17 @@
+extends layout
+
+block additional-css
+  style.
+    body > h3 {
+      text-align: center;
+      font-size: 35px;
+    }
+
+    body > p {
+      text-align: center;
+      font-size: 24px;
+    }
+
+block body
+  h3= 'Oops, ' + err.code
+  p= err.msg
