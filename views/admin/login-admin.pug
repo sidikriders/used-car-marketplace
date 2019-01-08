@@ -33,11 +33,18 @@ block additional-css
       cursor: pointer;
     }
 
+    form.login-container > p.red {
+      color: red;
+      text-align: center;
+      margin: 0 0 15px;
+    }
+
 block body
   h1 Login Admin Area
   form.login-container
     input#username.text(type="text", placeholder='Username')
     input#password.text(type="password", placeholder='Password')
+    p.red
     input(type="submit", value="Log In")
 
 block additional-script
@@ -48,9 +55,15 @@ block additional-script
         username: $('#username').val(),
         password: $('#password').val()
       }
-      axios.post('/api/login-admin', payload).then(function (resp) {
-        console.log(resp.data)
+      axios.post('/api/login-admin', payload).then(function (_resp) {
+        var resp = _resp.data
+        if (resp.status) {
+          window.location.href = '/admin/dashboard'
+        } else {
+          $(e.currentTarget).find('p.red').text(resp.data)
+        }
       }).catch(function (err) {
         console.error(err)
+        $(e.currentTarget).find('p.red').text('ERROR')
       })
     })
