@@ -19,10 +19,11 @@ html
         i.fas.fa-ad
         p Pasang Iklan
       .header-input
-        .fas.fa-search
-        input#header-search(type="text", name="search-car", placeholder='Cari mobil bekas/baru berdasarkan nama, jenis, atau tahun')
-        .btn.info-btn
-          span Cari Mobil
+        if url !== '/'
+          .fas.fa-search
+          input#header-search(type="text", name="search-car", placeholder='Cari mobil bekas/baru berdasarkan nama, jenis, atau tahun')
+          .btn.info-btn
+            span Cari Mobil
       a(href="/pusat-bantuan")
         i.fas.fa-question-circle
         p Bantuan
