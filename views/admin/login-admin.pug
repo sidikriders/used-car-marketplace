@@ -1,0 +1,56 @@
+extends ../layout
+
+block additional-css
+  style.
+    body > h1 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    form.login-container {
+      border: solid 1px #ccc;
+      border-radius: 4px;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: column;
+      width: 350px;
+      max-width: 100%;
+      padding: 30px 15px;
+    }
+
+    form.login-container > input.text {
+      margin: 0 0 15px;
+      font-size: 14px;
+      padding: 5px 15px;
+    }
+
+    form.login-container > input[type="submit"] {
+      background-color: blue;
+      height: 40px;
+      border: none;
+      outline: none;
+      color: white;
+      cursor: pointer;
+    }
+
+block body
+  h1 Login Admin Area
+  form.login-container
+    input#username.text(type="text", placeholder='Username')
+    input#password.text(type="password", placeholder='Password')
+    input(type="submit", value="Log In")
+
+block additional-script
+  script.
+    $('form.login-container').on('submit', function (e) {
+      e.preventDefault()
+      var payload = {
+        username: $('#username').val(),
+        password: $('#password').val()
+      }
+      axios.post('/api/login-admin', payload).then(function (resp) {
+        console.log(resp.data)
+      }).catch(function (err) {
+        console.error(err)
+      })
+    })
