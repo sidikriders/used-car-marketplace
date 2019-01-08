@@ -5,7 +5,7 @@ $('form#keyword').submit(function (e) {
   var input = _form.find('input')
   var keyword = input.val()
   var _url = '/cari-mobil'
-  window.location.href = '/cari-mobil' + keyword
+  window.location.href = '/cari-mobil?q=' + keyword
 })
 
 // initiate select search engine
@@ -40,22 +40,25 @@ $('#search-engine .input.select .btn').click(function (e) {
   })
 })
 
-// initiate tombol cari mobil
+// initiate tombol cari mobil di search engine
 $('#do-search').click(function (e) {
-  var keyword = $('#keyword input').val()
-  var locationId = Number($('#location').attr('val') || '0')
-  var locationName = $('#location .btn span').text()
+  if ($('#search-engine').hasClass('show-other-filters')) {
+    var params = {
+      q: $('#keyword input').val(),
+      brand: $('#brand').attr('val') || 0,
+      type: $('#type').attr('val') || 0,
+      year: $('#year').val(),
+      distance: $('#distance').attr('val') || 0,
+      transmition: $('#transmition').attr('val') || 0,
+      price: ($('#price input:nth-child(1)').val() || 0) + '-' + ($('#price input:nth-child(1)').val() || 1000000000)
+    }
 
-  var params = {
-    keyword: keyword ? 'q=' + keyword : false,
-    location: locationId > 0 ? ( 'location=' + locationName + '&locId=' + locationId) : false
+    window.location.href = '/cari-mobil?' + Object.keys(params).map(function (key) {
+      return key + '=' + params[key]
+    }).join('&')
+  } else {
+    window.location.href = '/cari-mobil?q=' + $('#keyword input').val()
   }
-
-  window.location.href = '/cari-mobil?' + Object.keys(params).map(function (key) {
-    return params[key]
-  }).filter(function(key) {
-    return key
-  }).join('&')
 })
 
 // initiate autocomplete
