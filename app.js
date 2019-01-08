@@ -42,6 +42,8 @@ app.use((err, req, res, next) => {
     msg: err.msg || 'Internal Server Error'
   }
   if (req.originalUrl.split('/')[1] === 'api') {
+    if (!err.data && err.msg) { err.data = err.msg }
+    if (!err.msg && err.data) { err.msg = err.data }
     res.send(err)
   } else {
     res.render('error')
