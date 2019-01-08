@@ -23,4 +23,8 @@ router.get('/', (req, res, next) => {
   })
 })
 
+router.get('/daftarkan-mobil', (req, res, next) => {
+  res.render('register-car')
+})
+
 module.exports = router

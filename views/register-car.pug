@@ -1,0 +1,20 @@
+extends layout
+
+block additional-css
+  link(rel="stylesheet", href="/css/register-car.css")
+
+block body
+  h1 Daftarkan mobil anda
+  p Segera iklankan mobil anda dan dapatkan penawaran menarik dari seluruh jogja!
+
+  .form-container
+    form#form-mobil
+      input#car-name(type="text", placeholder="Nama mobil")
+      input#car-brand(type="text", placeholder="Merek mobil")
+      input#car-telp(type="tel", placeholder="Nomor yang bisa di hubungi")
+      input#car-email(type="email", placeholder="Email yang bisa di hubungi")
+      textarea#car-desc(placeholder="Deskripsi singkat tentang mobil anda, seperti warna, tahun, lokasi, dan kondisinya ", cols="30", rows="10")
+      input(type="submit", value="Kirim")
+
+block additional-script
+  script(src="/js/register-car.js")
