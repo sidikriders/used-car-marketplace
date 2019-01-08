@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const session = require('express-session')
 
 const appConfig = require('./app-config.js')
+const renderController = require('./controllers/render-controller')
 const adminController = require('./controllers/admin-controller')
 const apiController = require('./controllers/api-controller')
 
@@ -24,17 +25,16 @@ app.use(session({
 }))
 
 app.use('/api', apiController)
-app.get('/', (req, res, next) => {
-  res.locals.url = req.originalUrl
-  res.render('home')
-})
 app.use('/admin', adminController)
+app.use('/', renderController)
 app.use('*', (req, res, next) => {
   next({
     code: 404,
     msg: 'Page Not Found'
   })
 })
+
+
 app.use((err, req, res, next) => {
   console.error(err)
   res.locals.err = {
