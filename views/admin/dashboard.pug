@@ -1,0 +1,81 @@
+extends ../layout
+
+block additional-css
+  link(rel="stylesheet", href="/css/dashboard.css")
+
+block body
+  h1 Dashboard
+  h3= 'Halo, ' + user
+
+  .list
+    p Mobil
+    a.btn.info(href='cars/new')
+      i.fas.fa-plus
+      span Tambah Mobil
+    .list-nya
+      each car, index in carList
+        .li(_id= car.id)
+          p= (index + 1) + '.'
+          p car.name
+          .action
+            a.btn.danger(href='cars/' + car.id)
+              i.far.fa-edit
+              span Edit / Detail
+            a.btn.warning
+              i.fas.fa-trash
+              span Delete
+  .list
+    p Merek
+    a.btn.info(href='brands/new')
+      i.fas.fa-plus
+      span Tambah Merek
+    .list-nya
+      each brand, index in brandList
+        .li(_id=brand.id)
+          p= (index + 1) + '.'
+          p brand.name
+          .img
+            img(src= brand.logo, alt=brand.name + ' logo')
+          .action
+            .btn.danger
+              i.far.fa-edit(href='brands/' + brand.id)
+              span Edit / Detail
+            .btn.warning
+              i.fas.fa-trash
+              span Delete
+  .list
+    p Tipe Mobil
+    a.btn.info(href='types/new')
+      i.fas.fa-plus
+      span Tambah Tipe Mobil
+    .list-nya
+      each type, index in typeList
+        .li(_id=type.id)
+          p= (index + 1) + '.'
+          p type.name
+          img(src= type.icon, alt= type.name + ' icon')
+          .action
+            .btn.danger
+              i.far.fa-edit(href='types/' + type.id)
+              span Edit / Detail
+            .btn.warning
+              i.fas.fa-trash
+              span Delete
+  .list
+    p Tipe Transmisi
+    a.btn.info(href='transmition/new')
+      i.fas.fa-plus
+      span Tambah Tipe Transmisi
+    .list-nya
+      each trans, index in transmitionList
+        .li(_id=trans.id)
+          p= (index + 1) + '.'
+          p trans.name
+          img(src= trans.icon, alt= trans.name + ' icon')
+          .action
+            .btn.danger
+              i.far.fa-edit(href='transmition/' + trans.id)
+              span Edit / Detail
+            .btn.warning
+              i.fas.fa-trash
+              span Delete

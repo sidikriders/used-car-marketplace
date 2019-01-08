@@ -1,0 +1,40 @@
+h1, h3 {
+  padding: 0 15px;
+}
+
+.btn {
+  padding: 0 10px;
+  border-radius: 5px;
+  height: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.btn > i {
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.btn.info {
+  background: turquoise;
+}
+
+.list {
+  padding: 0 15px;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: solid 2px #7bc6fb;
+  margin-top: 15px;
+}
+
+.list > p {
+  flex-grow: 1;
+  font-size: 24px;
+}
+
+.list .list-nya {
+  width: 100%;
+  margin: 15px 0;
+}
