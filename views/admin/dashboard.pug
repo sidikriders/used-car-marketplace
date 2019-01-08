@@ -16,7 +16,7 @@ block body
       each car, index in carList
         .li(_id= car.id)
           p= (index + 1) + '.'
-          p car.name
+          p= car.name
           .action
             a.btn.danger(href='cars/' + car.id)
               i.far.fa-edit
@@ -33,12 +33,11 @@ block body
       each brand, index in brandList
         .li(_id=brand.id)
           p= (index + 1) + '.'
-          p brand.name
-          .img
-            img(src= brand.logo, alt=brand.name + ' logo')
+          p= brand.name
+          img(src= brand.logo, alt=brand.name + ' logo')
           .action
-            .btn.danger
-              i.far.fa-edit(href='brands/' + brand.id)
+            a.btn.danger(href='brands/' + brand.id)
+              i.far.fa-edit
               span Edit / Detail
             .btn.warning
               i.fas.fa-trash
@@ -52,7 +51,7 @@ block body
       each type, index in typeList
         .li(_id=type.id)
           p= (index + 1) + '.'
-          p type.name
+          p= type.name
           img(src= type.icon, alt= type.name + ' icon')
           .action
             .btn.danger

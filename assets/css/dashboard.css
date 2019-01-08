@@ -1,5 +1,8 @@
 h1, h3 {
   padding: 0 15px;
+  max-width: 1240px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .btn {
@@ -19,6 +22,15 @@ h1, h3 {
   background: turquoise;
 }
 
+.btn.danger {
+  background-color: #fdc502;
+}
+
+.btn.warning {
+  background-color: red;
+  color: white;
+}
+
 .list {
   padding: 0 15px;
   display: flex;
@@ -26,15 +38,48 @@ h1, h3 {
   flex-wrap: wrap;
   align-items: center;
   border-bottom: solid 2px #7bc6fb;
-  margin-top: 15px;
+  margin: 15px auto 0;
+  max-width: 1240px;
 }
 
 .list > p {
   flex-grow: 1;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .list .list-nya {
   width: 100%;
   margin: 15px 0;
+}
+
+.list .list-nya .li {
+  display: flex;
+  border-bottom: solid 1px #6fe1d0;
+  margin-top: 15px;
+  align-items: center;
+  position: relative;
+  height: 50px;
+  padding: 0 15px;
+}
+
+.list-nya .li p:nth-child(1) {
+  width: 30px;
+}
+
+.list-nya .li p:nth-child(2) {
+  flex-grow: 1;
+}
+
+.list-nya .li > img {
+  height: calc(100% - 15px);
+  object-fit: contain;
+  flex-grow: 1;
+}
+
+.list-nya .li .action {
+  display: flex;
+}
+
+.list-nya .li .action .btn.danger {
+  margin-right: 15px;
 }
