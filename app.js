@@ -25,6 +25,7 @@ app.use(session({
 
 app.use('/api', apiController)
 app.get('/', (req, res, next) => {
+  res.locals.url = req.originalUrl
   res.render('home')
 })
 app.use('/admin', adminController)
