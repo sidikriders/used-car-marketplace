@@ -275,6 +275,12 @@
   }
 }
 
+@media only screen and (max-width: 385px) {
+  #search-engine > .input {
+    min-width: 173px;
+  }
+}
+
 .why-us,
 .car-type-list {
   background-color: #46acf7;
