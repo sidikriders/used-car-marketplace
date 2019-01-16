@@ -54,8 +54,8 @@ block body
           p= type.name
           img(src= type.icon, alt= type.name + ' icon')
           .action
-            .btn.danger
-              i.far.fa-edit(href='types/' + type.id)
+            a.btn.danger(href='types/' + type.id)
+              i.far.fa-edit
               span Edit / Detail
             .btn.warning
               i.fas.fa-trash

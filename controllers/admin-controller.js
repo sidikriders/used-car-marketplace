@@ -2,6 +2,7 @@ var router = require('express').Router()
 
 var models = require('../models')
 var CarBrand = models.CarBrand
+var CarType = models.CarType
 
 router.get('/login', (req, res, next) => {
   if (req.session.isLogin) {
@@ -27,9 +28,11 @@ router.get('/dashboard', (req, res, next) => {
   res.locals.typeList = []
   res.locals.transmitionList = []
   Promise.all([
-    CarBrand.findAll()
+    CarBrand.findAll(),
+    CarType.findAll()
   ]).then(resp => {
     res.locals.brandList = resp[0]
+    res.locals.typeList = resp[1]
     res.render('admin/dashboard')
   })
 })

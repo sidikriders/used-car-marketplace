@@ -9,7 +9,6 @@ router.use('*', (req, res, next) => {
 })
 
 router.get('/', (req, res, next) => {
-  console.log(process.env.NODE_ENV)
   Promise.all([
     CarBrand.findAll({
       attributes: ['id', 'name', 'logo']
