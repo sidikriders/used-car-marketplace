@@ -1,0 +1,75 @@
+extends layout
+
+block additional-css
+  link(rel="stylesheet", href="/css/cari-mobil.css")
+
+block body
+  form#filter
+    h2 Saring Pencarian
+    .input#f-keyword
+      p.title Kata Pencarian
+      .btn
+        i.fas.fa-search
+        input(type="text", placeholder='Kata kunci pencarian')
+    .input.select#f-brand
+      p.title Merek Mobil
+      .btn
+        i.fas.fa-tag
+        p Semua Merek
+      .options
+        p.opt Honda
+        p.opt Honda
+        p.opt Honda
+        p.opt Honda
+        p.opt Honda
+    .input.select#f-type
+      p.title Tipe Mobil
+      .btn
+        i.fas.fa-car
+        p Semua Tipe
+      .options
+        p.opt Sedan
+        p.opt Sedan
+        p.opt Sedan
+        p.opt Sedan
+        p.opt Sedan
+    .input#f-year
+      p.title Tahun
+      .btn
+        i.fas.fa-calendar
+        input(type="number", placeholder='Tahun Produksi')
+    .input.select#f-distance
+      p.title Jarak Tempuh
+      .btn
+        i.fas.fa-ruler
+        p Semua Jarak
+      .options
+        p.opt < 50.000 km
+        p.opt 50.000 - 100.000 km
+        p.opt 50.000 - 100.000 km
+        p.opt 50.000 - 100.000 km
+        p.opt 50.000 - 100.000 km
+    .input.select#f-transmition
+      p.title Transmisi
+      .btn
+        i.fas.fa-caret-down
+        p Semua Transmisi
+      .options
+        p.opt AT
+        p.opt MT
+    .input.range#f-price
+      p.title
+        i.fas.fa-money-bill
+        | Harga
+      .ranger
+        input.start(type="number", placeholder='Harga Mulai')
+        p -
+        input.end(type="number", placeholder='Harga Sampai')
+    .buttons
+      .btn.info
+        span Reset
+      input(type="submit", value="Terapkan")
+  #cars-container
+
+  block additional-script
+    script(src="/js/cari-mobil.js", async)

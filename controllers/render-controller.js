@@ -22,6 +22,10 @@ router.get('/', (req, res, next) => {
   })
 })
 
+router.get('/cari-mobil', (req, res, next) => {
+  res.render('cari-mobil')
+})
+
 router.get('/daftarkan-mobil', (req, res, next) => {
   res.render('register-car')
 })

@@ -1,0 +1,117 @@
+#filter {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  min-width: 400px;
+  max-width: 400px;
+  min-height: calc(100% - 110px);
+  padding: 20px 35px 0 15px;
+  margin: 15px 0;
+  border-right: solid 1px #ccc;
+}
+
+.input {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.input > p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.input .btn,
+.input.range .ranger {
+  border: solid 2px #aeaeae;
+  border-radius: 4px;
+  position: relative;
+  padding: 0 15px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.input .btn > i {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.input .btn > input,
+.input.range .ranger input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+}
+
+.input.select .options {
+  position: absolute;
+  border: solid 2px #ccc;
+  background-color: white;
+  border-radius: 4px;
+  width: calc(100% - 4px);
+  top: calc(100% - 2px);
+  z-index: 2;
+  display: none;
+}
+
+.input.select > .fs-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.input.select .options .opt {
+  height: 22px;
+  padding: 8px 0 0 10px;
+}
+
+.input.select .options .opt:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.input.select .options .opt:not(:last-child) {
+  border-bottom: solid 2px #ccc;
+}
+
+.input.range p.title i {
+  margin-right: 5px;
+}
+
+.input.range .ranger > p {
+  margin: 0 5px;
+}
+
+form#filter .buttons {
+  display: flex;
+}
+
+form#filter .buttons .btn,
+form#filter .buttons input[type="submit"] {
+  height: 30px;
+  padding: 0 15px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+form#filter .buttons .btn.info {
+  background-color: #aeaeae;
+}
+
+form#filter .buttons input[type="submit"] {
+  background-color: #2525bf;
+  color: white;
+}
+
+form#filter .buttons > *:hover {
+  cursor: pointer;
+  filter: brightness(150%)
+}
