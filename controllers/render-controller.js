@@ -23,6 +23,12 @@ router.get('/', (req, res, next) => {
 })
 
 router.get('/cari-mobil', (req, res, next) => {
+  res.locals.title = 'Pencarian Mobil'
+  res.locals.arrayList = [1, 2, 3, 4, 5, 6, 7, 8]
+  res.locals.paging = {
+    current: 2,
+    list: [1, 2, 3, 4]
+  }
   res.render('cari-mobil')
 })
 

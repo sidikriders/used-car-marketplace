@@ -69,7 +69,28 @@ block body
       .btn.info
         span Reset
       input(type="submit", value="Terapkan")
-  #cars-container
-
+  #cars
+    #cars-container
+      each el in arrayList
+        .card
+          img(src="/dummy/mobil-calya.jpg", alt="foto-mobil")
+          p.name 2018 Toyota Calya Murah Berkualitas KM Kecil
+          p.price 150Jt-an
+          a(href='/detail/some-name-and-id-0', title='2018 Toyota Calya Murah Berkualitas KM Kecil')
+        .card
+          img(src="/dummy/mobil-sienta.jpg", alt="foto-mobil")
+          p.name 2018 Toyota Sienta Murah Berkualitas KM Kecil
+          p.price 200Jt-an
+          a(href='/detail/some-name-and-id-0', title='2018 Toyota Sienta Murah Berkualitas KM Kecil')
+    if paging
+      #paging
+        .page-list
+          each page in paging.list
+            if page === paging.current
+              .page.active
+                span= page
+            else
+              .page
+                span= page
   block additional-script
     script(src="/js/cari-mobil.js", async)

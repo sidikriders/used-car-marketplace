@@ -1,13 +1,14 @@
 #filter {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 60px;
   min-width: 400px;
   max-width: 400px;
-  min-height: calc(100% - 110px);
+  min-height: calc(100% - 80px);
   padding: 20px 35px 0 15px;
-  margin: 15px 0;
+  margin: 0;
   border-right: solid 1px #ccc;
+  background-color: #e2f0f9;
 }
 
 .input {
@@ -30,6 +31,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  background-color: white;
 }
 
 .input .btn > i {
@@ -114,4 +116,80 @@ form#filter .buttons input[type="submit"] {
 form#filter .buttons > *:hover {
   cursor: pointer;
   filter: brightness(150%)
+}
+
+#cars {
+  padding: 15px 0px 15px 466px;
+}
+
+#cars-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#cars-container .card {
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  width: 190px;
+  height: 250px;
+  padding: 10px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  text-align: left;
+}
+
+#cars-container .card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+#cars-container .card p {
+  margin-top: 10px;
+  max-height: 32px;
+  overflow: hidden;
+}
+
+#cars-container .card p.price {
+  font-weight: 600;
+}
+
+#cars-container .card a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#paging {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#paging .page-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#paging .page-list .page {
+  border: solid 1px #19a3ec;
+  color: #19a3ec;
+  padding: 5px 10px;
+  margin: 0 5px;
+  background: white;
+}
+
+#paging .page-list .page:hover,
+#paging .page-list .page.active {
+  background: #19a3ec;
+  color: white;
+}
+
+#paging .page-list .page:hover {
+  cursor: pointer;
 }
