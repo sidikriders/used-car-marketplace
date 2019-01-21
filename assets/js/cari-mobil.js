@@ -2,6 +2,7 @@ function initPage () {
   if (typeof $ !== 'undefined') {
     initFilter()
     initSort()
+    initFilterMobile()
   } else {
     setTimeout(function () {
       return initPage()
@@ -47,6 +48,24 @@ function initSort() {
     setTimeout(function () {
       $('#sorting .sort .options').attr('style', '')
     }, 100);
+  })
+}
+
+function initFilterMobile() {
+  var filterBtn = $('#filter-mobile')
+  var filter = $('#filter')
+  var filterClose = $('#filter #close')
+
+  filterBtn.click(function (e) {
+    filterBtn.addClass('hide')
+    filter.addClass('show')
+    $('body').css('overflow', 'hidden')
+
+    filterClose.off('click').click(function (e2) {
+      filterBtn.removeClass('hide')
+      filter.removeClass('show')
+      $('body').css('overflow', '')
+    })
   })
 }
 

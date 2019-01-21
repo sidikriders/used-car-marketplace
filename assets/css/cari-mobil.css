@@ -261,6 +261,36 @@ form#filter .buttons > *:hover {
   padding: 15px;
 }
 
+#filter-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 100vw;
+  border-top: solid 2px #19a3ec;
+  background: white;
+  color: #19a3ec;
+  font-size: 16px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: all .15s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#filter-mobile.hide {
+  bottom: -60px;
+  transition: all .15s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#filter-mobile:hover {
+  cursor: pointer;
+  background: #c5ebff;
+}
+
+#filter-mobile > p > i {
+  margin-right: 10px;
+}
+
 @media only screen and (max-width: 1024px) {
   #filter {
     min-width: 200px;
@@ -301,6 +331,12 @@ form#filter .buttons > *:hover {
     z-index: 2;
     max-height: calc(100% - 80px);
     overflow-y: auto;
+    transition: all .15s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  #filter.show {
+    top: 60px;
+    transition: all .15s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   #filter .buttons {
@@ -308,11 +344,15 @@ form#filter .buttons > *:hover {
   }
 
   #filter #close {
-    display: block
+    display: block;
+    cursor: pointer;
   }
 
-
   #mobile-filter-container {
+    display: flex;
+  }
+
+  #filter-mobile {
     display: flex;
   }
 }
