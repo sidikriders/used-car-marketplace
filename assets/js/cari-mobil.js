@@ -1,6 +1,7 @@
 function initPage () {
   if (typeof $ !== 'undefined') {
     initFilter()
+    initSort()
   } else {
     setTimeout(function () {
       return initPage()
@@ -31,6 +32,21 @@ function initFilter () {
         _input.find('.fs-mask').remove()
       })
     }
+  })
+}
+
+function initSort() {
+  var opt = $('#sorting .sort .options .opt')
+  opt.click(function (e) {
+    var _opt = $(e.currentTarget)
+    var val = _opt.attr('val')
+    var _text = _opt.text()
+    $('#sorting .sort').attr('val', val)
+    $('#sorting .sort .btn p').text(_text)
+    $('#sorting .sort .options').hide()
+    setTimeout(function () {
+      $('#sorting .sort .options').attr('style', '')
+    }, 100);
   })
 }
 

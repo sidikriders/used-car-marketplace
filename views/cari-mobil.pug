@@ -5,6 +5,7 @@ block additional-css
 
 block body
   form#filter
+    i#close.fas.fa-times
     h2 Saring Pencarian
     .input#f-keyword
       p.title Kata Pencarian
@@ -70,6 +71,18 @@ block body
         span Reset
       input(type="submit", value="Terapkan")
   #cars
+    #sorting
+      p 17 - 32 dari 54 Mobil
+      .sort
+        .btn
+          i.fas.fa-caret-down
+          p Urutkan
+        .options
+          .opt(val="0") Rekomendasi
+          .opt(val="1") Termurah
+          .opt(val="2") Termahal
+          .opt(val="3") Terlama
+          .opt(val="4") Terbaru
     #cars-container
       each el in arrayList
         .card
