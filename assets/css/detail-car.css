@@ -134,7 +134,7 @@ span.date-added i {
   max-width: 300px;
   min-width: fit-content;
   font-size: 16px;
-  padding-left: 5px;
+  padding: 5px 0 5px 5px;
 }
 
 #car-data .quick-detail .detail img {
@@ -156,6 +156,7 @@ span.date-added i {
   display: flex;
   align-items: center;
   margin-right: 20px;
+  margin-bottom: 10px;
   font-size: 16px;
 }
 
@@ -174,7 +175,9 @@ span.date-added i {
   min-height: 300px;
 }
 
-#price-car .the-price {
+
+#price-car .the-price,
+#price-car .cara-pesan {
   height: 60px;
   width: 100%;
   display: flex;
@@ -183,7 +186,12 @@ span.date-added i {
   background: blue;
 }
 
-#price-car .the-price p {
+#price-car .cara-pesan {
+  display: none;
+}
+
+#price-car .the-price p,
+#price-car .cara-pesan p {
   font-size: 24px;
   color: white;
   font-weight: 700;
@@ -196,4 +204,79 @@ span.date-added i {
 .footer {
   border-top: solid 1px #ccc;
   background-color: #f3f3f3;
+}
+
+@media only screen and (max-width: 821px) {
+  #detail-car {
+    padding-right: 15px;
+    width: calc(100% - 30px);
+  }
+
+  #price-car .cara-pesan {
+    display: flex;
+  }
+
+  #price-car {
+    top: calc(100% - 60px);
+    right: 0;
+    width: 100%;
+    border: none;
+    border-top: solid 1px #ccc;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  #main-carousel {
+    position: relative;
+    left: -15px;
+    top: -15px;
+    width: calc(100% + 30px);
+  }
+
+  #main-carousel .big-one {
+    width: 100%;
+    height: 340px;
+    border-right: none;
+    border-left: none;
+  }
+
+  #main-carousel .big-one .dot-dots {
+    position: relative;
+    height: 20px;
+  }
+
+  #main-carousel .big-one .dot-dots .dot {
+    height: 5px;
+    width: 5px;
+  }
+
+  #main-carousel .big-one .main-photo-title {
+    bottom: 0;
+    height: 30px;
+    padding-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  #main-carousel .big-one {
+    height: 200px;
+  }
+
+  #main-carousel .big-one .main-photo-title {
+    height: 23px;
+    width: calc(100% - 30px);
+    padding: 10px 15px 0;
+    font-size: 12px;
+    background: #3339;
+  }
+
+  #main-carousel .big-one .arrow .the-arrow {
+    height: 40px;
+    width: 30px;
+    font-size: 16px;
+  }
 }
