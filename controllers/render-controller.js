@@ -38,7 +38,6 @@ router.get('/daftarkan-mobil', (req, res, next) => {
 
 router.get('/detail/:nameAndId', (req, res, next) => {
   var carId = req.params.nameAndId.split('-').slice(-1)[0]
-  console.log('query get car detail with ID: ' + carId)
   res.locals.title = 'Jual Mobil ' + req.params.nameAndId.split('-').slice(0, -1).map(word => word[0].toUpperCase() + word.slice(1)).join(' ')
   res.locals.carImages = [
     {
