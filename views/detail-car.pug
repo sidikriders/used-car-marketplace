@@ -19,6 +19,38 @@ block body
         .arrow.left
           .the-arrow
             i.fas.fa-angle-left
+    #car-data
+      h1 Toyota Calya 2015 Kondisi Gress
+      span.date-added
+        i.fas.fa-calendar
+        | 2018-01-30
+      .quick-detail
+        h3 Detail Singkat
+        .detail
+          img(src="/img/icons/car-year.png", alt="icon-calendar")
+          span Tahun
+          span.data 2015
+        .detail
+          img(src="/img/icons/car-brand.png", alt="icon-brand")
+          span Merek
+          span.data Toyota
+        .detail
+          img(src="/img/icons/car-type.png", alt="icon-car-type")
+          span Tipe
+          span.data MPV
+        .detail
+          img(src="/img/icons/car-distance.png", alt="icon-distance")
+          span Jarak
+          span.data 13.800 km
+        .detail
+          img(src="/img/icons/car-transmission.png", alt="icon-transmission")
+          span Transmisi
+          span.data Automatic
+        .detail
+          img(src="/img/icons/car-price.png", alt="icon-price")
+          span Harga
+          span.data Rp. 120.000.000,-
   #price-car
+  include footer
 block additional-script
   script(src="/js/detail-car.js")
