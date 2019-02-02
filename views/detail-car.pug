@@ -24,45 +24,55 @@ block body
       i.fas.fa-calendar
       | 2018-01-30
     #car-data
+      .quick-detail
+        h3 Detail Singkat
+        .detail
+          img(src="/img/icons/car-year-blue.png", alt="icon-calendar")
+          span Tahun
+          span.data 2015
+        .detail
+          img(src="/img/icons/car-brand-blue.png", alt="icon-brand")
+          span Merek
+          span.data Toyota
+        .detail
+          img(src="/img/icons/car-type-blue.png", alt="icon-car-type")
+          span Tipe
+          span.data MPV
+        .detail
+          img(src="/img/icons/car-distance-blue.png", alt="icon-distance")
+          span Jarak
+          span.data 13.800 km
+        .detail
+          img(src="/img/icons/car-transmission-blue.png", alt="icon-transmission")
+          span Transmisi
+          span.data Automatic
+        .detail
+          img(src="/img/icons/car-fuel-blue.png", alt="icon-transmission")
+          span Bahan Bakar
+          span.data Bensin
+        .detail
+          img(src="/img/icons/car-color-blue.png", alt="icon-transmission")
+          span Warna
+          span.data Merah
+        .detail
+          img(src="/img/icons/car-price-blue.png", alt="icon-price")
+          span Harga
+          span.data Rp. 120.000.000,-
+      .benefits
+        h3 Aksesoris Mobil
+        .benefits-container
+          each benefit in carBenefits
+            .benefit
+              i.fas.fa-plus
+              p= benefit
       .description
         h3 Deskripsi Mobil
         each _p in carDesc.split('\n')
           p= _p
-      .quick-detail
-        h3 Detail Singkat
-        .detail
-          img(src="/img/icons/car-year.png", alt="icon-calendar")
-          span Tahun
-          span.data 2015
-        .detail
-          img(src="/img/icons/car-brand.png", alt="icon-brand")
-          span Merek
-          span.data Toyota
-        .detail
-          img(src="/img/icons/car-type.png", alt="icon-car-type")
-          span Tipe
-          span.data MPV
-        .detail
-          img(src="/img/icons/car-distance.png", alt="icon-distance")
-          span Jarak
-          span.data 13.800 km
-        .detail
-          img(src="/img/icons/car-transmission.png", alt="icon-transmission")
-          span Transmisi
-          span.data Automatic
-        .detail
-          img(src="/img/icons/car-fuel.png", alt="icon-transmission")
-          span Bahan Bakar
-          span.data Bensin
-        .detail
-          img(src="/img/icons/car-color.png", alt="icon-transmission")
-          span Warna
-          span.data Merah
-        .detail
-          img(src="/img/icons/car-price.png", alt="icon-price")
-          span Harga
-          span.data Rp. 120.000.000,-
   #price-car
+    .the-price
+      img(src="/img/icons/car-price-white.png", alt="car-price-icon-white")
+      p Rp. 120.000.000,-
   include footer
 block additional-script
   script(src="/js/detail-car.js")

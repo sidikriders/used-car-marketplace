@@ -103,22 +103,18 @@ span.date-added {
 
 span.date-added i {
   margin-right: 10px;
+  color: #0394ff;
 }
 
-#car-data {
-  display: flex;
+#car-data > * {
   margin: 30px 0 15px;
+  width: 100%;
 }
 
 #car-data * h3 {
   font-weight: 500;
   font-size: 20px;
   margin: 15px 0 5px;
-}
-
-#car-data .description {
-  width: calc(100% - 300px);
-  padding-right: 15px;
 }
 
 #car-data .description p {
@@ -150,8 +146,27 @@ span.date-added i {
   width: 100px;
 }
 
+#car-data .benefits .benefits-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+#car-data .benefits-container .benefit {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.benefits-container .benefit i {
+  font-size: 10px;
+  color: #0394ff;
+  margin-right: 5px;
+}
+
 #price-car {
-  background: blue;
+  border: solid 1px #ccc;
   position: fixed;
   top: 75px;
   right: 15px;
@@ -159,6 +174,25 @@ span.date-added i {
   min-height: 300px;
 }
 
+#price-car .the-price {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: blue;
+}
+
+#price-car .the-price p {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+}
+
+#price-car .the-price img {
+  height: 25px;
+  margin-right: 10px;
+}
 .footer {
   border-top: solid 1px #ccc;
   background-color: #f3f3f3;
