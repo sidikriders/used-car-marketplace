@@ -162,7 +162,7 @@ block body
         .type
           i.fas.fa-car
           p= _type
-          a(href="/type/" + _type + '-' + index, title= _type)
+          a(href="/type/" + _type.toLowerCase().split(' ').join('-') + '-' + index, title= _type)
       .type
         .dot-dot-dot
           i.fas.fa-circle
