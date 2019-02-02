@@ -7,6 +7,7 @@ body {
   padding-left: 15px;
   width: calc(100% - 465px);
   min-height: 200px;
+  margin-bottom: 60px;
 }
 
 #main-carousel {
@@ -104,14 +105,29 @@ span.date-added i {
   margin-right: 10px;
 }
 
-#car-data .quick-detail {
+#car-data {
+  display: flex;
   margin: 30px 0 15px;
 }
 
-#car-data .quick-detail h3 {
+#car-data * h3 {
   font-weight: 500;
   font-size: 20px;
   margin: 15px 0 5px;
+}
+
+#car-data .description {
+  width: calc(100% - 300px);
+  padding-right: 15px;
+}
+
+#car-data .description p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: justify;
+  margin-bottom: 15px;
+  text-indent: 30px;
 }
 
 #car-data .quick-detail .detail {
@@ -141,4 +157,9 @@ span.date-added i {
   right: 15px;
   width: 420px;
   min-height: 300px;
+}
+
+.footer {
+  border-top: solid 1px #ccc;
+  background-color: #f3f3f3;
 }

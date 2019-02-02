@@ -19,11 +19,15 @@ block body
         .arrow.left
           .the-arrow
             i.fas.fa-angle-left
+    h1 Toyota Calya 2015 Kondisi Gress
+    span.date-added
+      i.fas.fa-calendar
+      | 2018-01-30
     #car-data
-      h1 Toyota Calya 2015 Kondisi Gress
-      span.date-added
-        i.fas.fa-calendar
-        | 2018-01-30
+      .description
+        h3 Deskripsi Mobil
+        each _p in carDesc.split('\n')
+          p= _p
       .quick-detail
         h3 Detail Singkat
         .detail
@@ -46,6 +50,14 @@ block body
           img(src="/img/icons/car-transmission.png", alt="icon-transmission")
           span Transmisi
           span.data Automatic
+        .detail
+          img(src="/img/icons/car-fuel.png", alt="icon-transmission")
+          span Bahan Bakar
+          span.data Bensin
+        .detail
+          img(src="/img/icons/car-color.png", alt="icon-transmission")
+          span Warna
+          span.data Merah
         .detail
           img(src="/img/icons/car-price.png", alt="icon-price")
           span Harga
