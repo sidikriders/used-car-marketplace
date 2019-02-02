@@ -1,0 +1,24 @@
+extends layout
+
+block additional-css
+  link(rel="stylesheet", href="/css/detail-car.css")
+
+block body
+  #detail-car
+    #main-carousel(index='0')
+      .big-one
+        img(src=carImages[0].url, alt=carImages[0].title)
+        .main-photo-title
+          p= carImages[0].title
+        .dot-dots
+          each img, index in carImages
+            .dot(class= (index === 0) ? 'active' : '', title= img.title, url= img.url)
+        .arrow.right
+          .the-arrow
+            i.fas.fa-angle-right
+        .arrow.left
+          .the-arrow
+            i.fas.fa-angle-left
+  #price-car
+block additional-script
+  script(src="/js/detail-car.js")

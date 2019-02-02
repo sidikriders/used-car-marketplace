@@ -36,4 +36,38 @@ router.get('/daftarkan-mobil', (req, res, next) => {
   res.render('register-car')
 })
 
+router.get('/detail/:nameAndId', (req, res, next) => {
+  var carId = req.params.nameAndId.split('-').slice(-1)[0]
+  console.log('query get car detail with ID: ' + carId)
+  res.locals.title = req.params.nameAndId.split('-').slice(0, -1).map(word => word[0].toUpperCase() + word.slice(1)).join(' ')
+  res.locals.carImages = [
+    {
+      url: '/dummy/calya-depan.jpg',
+      title: 'Tampak Depan'
+    }, {
+      url: '/dummy/calya-kanan.jpg',
+      title: 'Tampak Kanan'
+    }, {
+      url: '/dummy/calya-belakang.jpg',
+      title: 'Tampak Belakang'
+    }, {
+      url: '/dummy/calya-kiri.jpg',
+      title: 'Tampak Kiri'
+    }, {
+      url: '/dummy/calya-interior-depan.jpeg',
+      title: 'Interior Depan'
+    }, {
+      url: '/dummy/calya-interior-jok-tengah.jpeg',
+      title: 'Interior Tengah'
+    }, {
+      url: '/dummy/calya-bagasi-dibuka.jpeg',
+      title: 'Bagasi'
+    }, {
+      url: '/dummy/calya-mesin-dibuka.jpeg',
+      title: 'Mesin'
+    }
+  ]
+  res.render('detail-car')
+})
+
 module.exports = router

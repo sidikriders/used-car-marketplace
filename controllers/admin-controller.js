@@ -37,4 +37,8 @@ router.get('/dashboard', (req, res, next) => {
   })
 })
 
+router.get('/cars/new', (req, res, next) => {
+  res.render('admin/new-car')
+})
+
 module.exports = router
