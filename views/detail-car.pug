@@ -69,12 +69,12 @@ block body
         h3 Deskripsi Mobil
         each _p in carDesc.split('\n')
           p= _p
-  #price-car
-    .cara-pesan
-      p Cara Pesan
-    .the-price
-      img(src="/img/icons/car-price-white.png", alt="car-price-icon-white")
-      p Rp. 120.000.000,-
+    #price-car
+      .cara-pesan
+        p Cara Pesan
+      .the-price
+        img(src="/img/icons/car-price-white.png", alt="car-price-icon-white")
+        p Rp. 120.000.000,-
   include footer
 block additional-script
   script(src="/js/detail-car.js")

@@ -4,15 +4,15 @@ body {
 
 #detail-car {
   position: relative;
-  padding-left: 15px;
-  width: calc(100% - 465px);
+  max-width: 1350px;
   min-height: 200px;
-  margin-bottom: 60px;
+  margin: auto auto 60px;
+  padding: 0 15px;
 }
 
 #main-carousel {
   position: relative;
-  width: 100%;
+  width: calc(100% - 436px);
   min-height: 60px;
 }
 
@@ -168,11 +168,12 @@ span.date-added i {
 
 #price-car {
   border: solid 1px #ccc;
-  position: fixed;
-  top: 75px;
+  position: absolute;
+  top: 0px;
   right: 15px;
   width: 420px;
   min-height: 300px;
+  background: white;
 }
 
 
@@ -206,22 +207,32 @@ span.date-added i {
   background-color: #f3f3f3;
 }
 
-@media only screen and (max-width: 821px) {
+@media only screen and (max-width: 900px) {
   #detail-car {
     padding-right: 15px;
     width: calc(100% - 30px);
   }
 
+  #main-carousel {
+    width: 100%
+  }
+
   #price-car .cara-pesan {
     display: flex;
+    cursor: pointer;
   }
 
   #price-car {
+    position: fixed;
     top: calc(100% - 60px);
     right: 0;
     width: 100%;
     border: none;
     border-top: solid 1px #ccc;
+  }
+
+  .footer {
+    margin-bottom: 60px;
   }
 }
 
