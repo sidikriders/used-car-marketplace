@@ -1,4 +1,5 @@
 initMainCarousel()
+initCreditSimulation()
 
 function initMainCarousel () {
   var mainCarousel = $('#main-carousel')
@@ -57,4 +58,21 @@ function initMainCarousel () {
 
     }
   })
+}
+
+function initCreditSimulation() {
+  setTimeout(function () {
+    $('#price-car .custom-loading').hide()
+  }, 800);
+
+  $('#price-car .cara-pesan').click(function (e) {
+    var el = $(e.currentTarget)
+    var priceCar = el.parent()
+    priceCar.addClass('showed')
+  })
+
+  $('#price-car .the-price i.fas.fa-times').click(function (e) {
+    $('#price-car').removeClass('showed')
+  })
+
 }

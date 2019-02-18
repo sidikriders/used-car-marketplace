@@ -70,11 +70,60 @@ block body
         each _p in carDesc.split('\n')
           p= _p
     #price-car
+      .custom-loading
+        .lds-ellipsis
+          div
+          div
+          div
+          div
       .cara-pesan
         p Cara Pesan
       .the-price
         img(src="/img/icons/car-price-white.png", alt="car-price-icon-white")
         p Rp. 120.000.000,-
+        i.fas.fa-times
+      p.simulation-title Simulasi Cicilan Mobil Ini
+      p.credit-offerer Tersedia 3 penyedia jasa kredit untuk mobil ini
+      #credit-sim
+        .group
+          p.title Penyedia Credit
+          select#sim-company
+            option(value="0") Adira
+            option(value="1") MCF
+            option(value="2") BCA Finance
+        .group
+          p.title DP
+            i (min. 25jt)
+          input#sim-dp(type="number" value="15000000")
+        .group
+          p.title Jumlah Angsuran
+          select#sim-count
+            option(value="6") 6 Bulan
+            option(value="12") 1 Tahun
+            option(value="18") 1,5 Tahun
+            option(value="24") 2 Tahun
+            option(value="30") 2,5 Tahun
+            option(value="36") 3 Tahun
+            option(value="42") 3,5 Tahun
+            option(value="48") 4 Tahun
+            option(value="54") 5,5 Tahun
+            option(value="60") 5 Tahun
+        .group
+          p.title Angsuran Perbulan
+          p#sim-monthly Rp. 3.521.000,-
+      .penyedia-angsuran
+        p Penyedia jasa kredit
+        .company
+          img(src="/dummy/logo-adira.png", alt="logo-adira", title='Adira Credit Finance')
+        .company
+          img(src="/dummy/logo-mega.jpeg", alt="logo-mega", title='Mega Credit Finance')
+        .company
+          img(src="/dummy/logo-bca.png", alt="logo-bca", title='BCA Credit Finance')
+      .call-us
+        p Hubungi kami untuk pemesanan, jadwal kunjungan, atau pertanyaan lainnya
+        a.whatsapp-btn(href="https://wa.me/628176921531", target="_blank")
+          i.fab.fa-whatsapp
+          p WhatsApp
   include footer
 block additional-script
   script(src="/js/detail-car.js")

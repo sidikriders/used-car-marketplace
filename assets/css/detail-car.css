@@ -176,6 +176,17 @@ span.date-added i {
   background: white;
 }
 
+#price-car .custom-loading {
+  position: absolute;
+  height: calc(100% - 60px);
+  width: 100%;
+  top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333333b5;
+  z-index: 1;
+}
 
 #price-car .the-price,
 #price-car .cara-pesan {
@@ -202,9 +213,119 @@ span.date-added i {
   height: 25px;
   margin-right: 10px;
 }
+
+#price-car .simulation-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 15px;
+}
+
+#price-car .credit-offerer {
+  font-size: 16px;
+  margin: 15px;
+}
+
+#credit-sim > .group {
+  padding: 15px;
+  background: #0394ff;
+}
+
+#credit-sim > .group .title {
+  font-size: 16px;
+  min-width: 150px;
+  color: white;
+}
+
+#credit-sim > .group .title i {
+  margin-left: 5px;
+}
+
+#credit-sim > .group > select,
+#credit-sim > .group > input {
+  width: 100%;
+  margin-top: 10px;
+  height: 30px;
+  padding: 0 15px;
+  border: none;
+  background-color: white;
+}
+
+#credit-sim > .group > input {
+  width: calc(100% - 30px);
+}
+
+#credit-sim > .group #sim-monthly {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  margin-top: 10px;
+}
+
 .footer {
   border-top: solid 1px #ccc;
   background-color: #f3f3f3;
+}
+
+.penyedia-angsuran {
+  padding: 0 15px;
+  position: relative;
+}
+
+.penyedia-angsuran > p {
+  margin: 10px 0 5px 0;
+  font-size: 16px;
+}
+
+.penyedia-angsuran .company {
+  display: inline;
+}
+
+.penyedia-angsuran .company img {
+  width: 30%;
+  height: 60px;
+  object-fit: contain;
+}
+
+#price-car .call-us {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 0;
+}
+
+#price-car .call-us > p {
+  margin: 0 15px;
+}
+
+#price-car .call-us .whatsapp-btn {
+  background-color: #22b559;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  height: 60px;
+  margin: 15px;
+  width: calc(100% - 30px);
+}
+
+#price-car .call-us .whatsapp-btn i {
+  margin-right: 10px;
+}
+
+#price-car .the-price i.fas.fa-times {
+  font-size: 20px;
+  color: blue;
+  position: absolute;
+  top: 75px;
+  right: 10px;
+  background-color: white;
+  padding: 5px 8px;
+  display: none;
+}
+
+#price-car.showed .the-price i.fas.fa-times {
+  display: inline;
 }
 
 @media only screen and (max-width: 900px) {
@@ -229,6 +350,13 @@ span.date-added i {
     width: 100%;
     border: none;
     border-top: solid 1px #ccc;
+    max-height: 100vh;
+    overflow: auto;
+  }
+
+  #price-car.showed {
+    top: 0;
+    transition: top .3s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   .footer {
@@ -289,5 +417,63 @@ span.date-added i {
     height: 40px;
     width: 30px;
     font-size: 16px;
+  }
+}
+
+/* Loading Css */
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 27px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #0394ff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 6px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 6px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 26px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 45px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(19px, 0);
   }
 }
